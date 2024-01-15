@@ -46,7 +46,7 @@ public final class RestorerWeb extends JavaPlugin implements Listener {
         }
     }
     public File getFile(String fileName){
-        return new File(getDataFolder(), fileName + "yml");
+        return new File(getDataFolder(), fileName + ".yml");
     }
 
     @EventHandler
