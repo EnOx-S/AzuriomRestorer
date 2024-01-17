@@ -20,7 +20,7 @@ public final class RestorerWeb extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        System.out.println("§7Plugin RestorerWeb by §3AlouchiCC");
+        System.out.println("§7Plugin RestorerWeb by §3AlouchiCC &7fix by §3EnOx_S");
         getServer().getPluginManager().registerEvents(this, this);
 
         createFile("config");
@@ -52,10 +52,10 @@ public final class RestorerWeb extends JavaPlugin implements Listener {
     @EventHandler
     public void Skins(PlayerJoinEvent event) throws SkinRequestException {
         Player player = event.getPlayer();
-        skinsRestorerAPI.setSkin(getConfig().getString("url") + player.getName(), skinsRestorerAPI.toString());
+        skinsRestorerAPI.setSkin(player.getName(), getConfig().getString("url") + player.getName());
     }
     @Override
     public void onDisable() {
-        System.out.println("§7Plugin RestorerWeb by §3AlouchiCC");
+        System.out.println("§7Plugin RestorerWeb by §3AlouchiCC &7fix by §3EnOx_S");
     }
 }
